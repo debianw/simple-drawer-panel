@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="simple-drawer-panel">
+  <template>
+    <link rel="stylesheet" type="text/css" href="simple-drawer-panel.css">
+
+    <div id="drawer">
+      <content select="[drawer]"></content>
+    </div>
+
+    <div id="main" class="shadow-left {{ {in: isOpen, out: !isOpen} | tokenList}}" fit>
+      <content select="[main]"></content>
+    </div>
+
+  </template>
+
+  <script>
+    Polymer('simple-drawer-panel', {
+      
+      /**
+       *
+       */
+
+      created: function () {
+        this.isOpen = true;
+      },
+
+      /**
+       *
+       */
+
+      open: function () {
+        this.isOpen = true;
+      },
+
+      /**
+       *
+       */
+
+      close: function () {
+        this.isOpen = false;
+      },
+
+      /**
+       *
+       */
+
+      toggle: function () {
+        this.isOpen = !this.isOpen;
+      }
+
+    });
+  </script>
+</polymer-element>
