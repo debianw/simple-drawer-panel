@@ -54,10 +54,10 @@ polyfill-next-selector { content: ':host [main]'; }
 }
 
 #main {
-  -webkit-transition: transform 300ms, -webkit-transform 300ms;
-  -moz-transition: transform 300ms, -webkit-transform 300ms;
-  -o-transition: transform 300ms, -webkit-transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 #main.in {
